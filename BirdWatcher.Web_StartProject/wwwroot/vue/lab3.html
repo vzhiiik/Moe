@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>demo</title>
+    <style>
+        div, input {
+            display: block
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <h5>Alla namn</h5>
+        <ul>
+            <li v-for="x in myList">
+                {{x.name}}
+            </li>
+        </ul>
+
+        <h5>Alla namn som börjar på R:</h5>
+        <ul>
+            <li v-for="x in letterR">{{x.name}}</li>
+        </ul>
+
+        <h5>Börjar på ett visst tecken</h5>
+        <p>Ange tecken</p>
+        <input v-model="input" />
+        <input type="checkbox" id="checkbox" v-model="checked" />Känslig för case
+        <label for="checkbox">{{checked}}</label>
+        <ul>
+            <li v-for="x in letterInput">{{x.name}}</li>
+        </ul>
+
+        <h5>Lägg till ett namn</h5>        
+        <input v-model="newName" />
+        <button v-on:click="addName()">Ok</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="lab3.js"></script>
+</body>
+</html>

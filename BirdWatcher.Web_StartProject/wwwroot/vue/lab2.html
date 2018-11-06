@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>demo</title>
+    <style>
+        div, input {
+            display: block
+        }
+    </style>
+</head>
+<body>
+    <div id="app2">
+        <div><button v-on:click="counter +=1">Tryck</button></div>
+        <div>Räknare: {{counter}}</div>
+
+        <div v-if="(counter >= 10 && counter<20)">Du har tryckt 10 gånger!</div>
+        <div v-if="(counter >= 20)">Oj du har tryckt 20 gånger!</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="lab2.js"></script>
+
+</body>
+</html>
